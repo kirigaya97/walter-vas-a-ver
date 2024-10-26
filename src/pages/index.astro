@@ -26,9 +26,24 @@ import Card from '../components/Card.astro';
 			/>
 		</ul>
 		<img src="/amelia-bano.webp" alt="La gatita en cuestion" class="amelia">
+		<button id="whatsappShareButton">Compartí esta web en WhatsApp</button>
+
 		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lFjME4H97nCs32jsdB57o_Lmd_it688&ehbc=2E312F&noprof=1" ></iframe>
 
 	</main>
+	<script>
+		// script.js
+
+document.getElementById("whatsappShareButton").addEventListener("click", function () {
+    const siteUrl = "https://walter-vas-a-ver-amelia.vercel.app/";
+    const message = `Ayudame a encontrar a Amelia: ${siteUrl}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp share link
+    window.open(whatsappUrl, "_blank");
+});
+
+	</script>
 </Layout>
 
 <style>
@@ -105,4 +120,21 @@ import Card from '../components/Card.astro';
 		height: auto;
 		border-radius: 12px;
 	}
+
+	/* styles.css */
+
+#whatsappShareButton {
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#whatsappShareButton:hover {
+    background-color: #1ebe57;
+}
+
 </style>
