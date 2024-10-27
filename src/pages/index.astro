@@ -13,6 +13,10 @@ import Card from '../components/Card.astro';
 				title="Esta es la zona"
 				body="Av. Caseros entre Perdriel y anchorís"
 			/>
+
+		<p id="update" class="instructions">
+			<span class="update"><strong>Actualización</strong></span><br> Se encuentra dentro del <strong>galpón en Anchoris 86</strong>, si conoces alguna forma de contactar a los dueños, por favor escribime.
+		</p>
 		<p class="instructions">
 			Perdí a mi gatita Amelia. La vimos por última vez el martes 21/10. 
 			<br><code>OFRECEMOS RECOMPENSA</code><br>por cualquier información verídica.<br />
@@ -135,6 +139,16 @@ document.getElementById("whatsappShareButton").addEventListener("click", functio
 
 #whatsappShareButton:hover {
     background-color: #1ebe57;
+}
+
+/* Update notification */
+.update {
+	font-size: 3rem;
+}
+
+#update {
+	font-size: 2rem;
+	background-color: #2aff3c;
 }
 
 </style>
