@@ -6,53 +6,30 @@ import Card from '../components/Card.astro';
 <Layout title="Perdí a mi gatita">
 	<main>
 		
-		<h1>Estoy buscando a <br><span class="text-gradient">Amelia</span></h1>
+		<h1><span class="encontrada">Estoy buscando</span><br> Encontramos a <br><span class="text-gradient">¡Amelia!</span></h1>
 		<img class="icono-gato" src="/icons8-cat-64.png" alt="Amelia" />
-		<Card
-				href="https://www.google.com/maps/d/u/0/edit?mid=1lFjME4H97nCs32jsdB57o_Lmd_it688&usp=sharing"
-				title="Esta es la zona"
-				body="Av. Caseros entre Perdriel y anchorís"
-			/>
+		
 
 		<p id="update" class="instructions">
-			<span class="update"><strong>Actualización</strong></span><br> Se encuentra dentro del <strong>galpón en Anchoris 86</strong>, si conoces alguna forma de contactar a los dueños, por favor escribime.
+			<span class="update"><strong>¡LA ENCONTRAMOS!</strong></span><br> Gracias a todos los que nos ayudaron a rescatarla. <br> <strong> Amelia hoy duerme calentita en casa :)</strong>
 		</p>
 		<p class="instructions">
 			Perdí a mi gatita Amelia. La vimos por última vez el martes 21/10. 
-			<br><code>OFRECEMOS RECOMPENSA</code><br>por cualquier información verídica.<br />
+			<br><code>¡La rescatamos el 27/10!</code><br>
 			<strong>No es el chisme que buscabas:</strong> pero es una causa noble.
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://wa.me/+5491132125484"
-				title="Enviame un WhatsApp"
-				body="Cualquier información ayuda."
-			/>
-		</ul>
 		<img src="/amelia-bano.webp" alt="La gatita en cuestion" class="amelia">
-		<button id="whatsappShareButton">Compartí esta web en WhatsApp</button>
-
-		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lFjME4H97nCs32jsdB57o_Lmd_it688&ehbc=2E312F&noprof=1" width="900" height="450" ></iframe>
-
+		
 	</main>
-	<script>
-		// script.js
-
-document.getElementById("whatsappShareButton").addEventListener("click", function () {
-    const siteUrl = "https://buscando-a-amelia.vercel.app/";
-    const message = `Ayudame a encontrar a Amelia: ${siteUrl}`;
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp share link
-    window.open(whatsappUrl, "_blank");
-});
-
-	</script>
+	
 </Layout>
 
 <style>
 
-	icono-gato {
+
+	.encontrada {
+		text-decoration-line: line-through;
+		text-decoration-color: red ;
 	}
 	main {
 		margin: auto;
